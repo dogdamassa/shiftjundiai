@@ -5,7 +5,7 @@ export const siteConfig = {
   instagram: "https://www.instagram.com/shift.estudiojundiai/",
   whatsapp:
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ??
-    "5511973771914",
+    "5511990130543",
 };
 
 export function whatsappUrl(

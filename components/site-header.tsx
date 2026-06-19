@@ -11,6 +11,7 @@ const links = [
   ["Experiência", "/#experiencia"],
   ["Evolução", "/#evolucao"],
   ["Estrutura", "/#estrutura"],
+  ["Professores", "/professores"],
   ["Localização", "/#localizacao"],
 ];
 
