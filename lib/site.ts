@@ -8,8 +8,7 @@ export const siteConfig = {
     street: "Av. 9 de Julho, 3290 - Loja 4",
     locality: "Jundiaí",
     region: "SP",
-    // TODO: preencher com o CEP exato da loja (melhora o SEO local).
-    postalCode: "",
+    postalCode: "13201-019",
     country: "BR",
   },
   // Telefone em formato internacional E.164 para o dado estruturado.
