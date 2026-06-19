@@ -245,8 +245,13 @@ export default function HomePage() {
               <Check /> Agenda de treino e recovery
             </li>
           </ul>
-          <a className="text-link" href="/login">
-            Conheça a área do aluno <ArrowRight />
+          <a
+            className="text-link"
+            href={whatsappUrl()}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Quero conhecer a Shift <ArrowRight />
           </a>
         </div>
         <div className="app-preview">

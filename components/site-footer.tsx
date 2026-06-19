@@ -16,8 +16,8 @@ export function SiteFooter() {
         <div>
           <span className="footer-label">Navegação</span>
           <Link href="/#metodo">Método Shift</Link>
+          <Link href="/#experiencia">Experiência</Link>
           <Link href="/#estrutura">Estrutura</Link>
-          <Link href="/login">Área do aluno</Link>
         </div>
         <div>
           <span className="footer-label">Fale com a Shift</span>
