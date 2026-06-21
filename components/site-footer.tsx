@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <BrandLogo />
+          <BrandLogo lockup variant="light" />
           <p>
             Treinamento com método, direção e acompanhamento de verdade.
           </p>

@@ -5,8 +5,8 @@
   --black-soft: #0d0f10;
   --graphite: #151719;
   --graphite-2: #1e2124;
-  --orange: #ff5c00;
-  --orange-light: #ff7a20;
+  --orange: #ff6a00;
+  --orange-light: #ff914d;
   --orange-dark: #c94300;
   --white: #f7f5f2;
   --muted: #9fa3a7;
@@ -14,6 +14,523 @@
   --font-body: "Space Grotesk", sans-serif;
   --font-display: "Archivo Black", sans-serif;
   --font-condensed: "Archivo", sans-serif;
+}
+
+/* Wiki LLM interview and review */
+.wiki-interview-page {
+  min-height: 100vh;
+  padding: 54px 20px 90px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(255, 106, 0, 0.16), transparent 32%),
+    #0b0c0d;
+}
+
+.wiki-interview-form {
+  display: grid;
+  width: min(860px, 100%);
+  gap: 22px;
+  margin: auto;
+}
+
+.wiki-intro-card,
+.wiki-identity-card,
+.wiki-question-card,
+.wiki-interview-success {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(21, 23, 25, 0.94);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.wiki-intro-card {
+  padding: clamp(32px, 6vw, 64px);
+}
+
+.wiki-intro-card > span,
+.wiki-interview-success > span {
+  color: var(--orange);
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.wiki-intro-card h1,
+.wiki-interview-success h1 {
+  max-width: 680px;
+  margin: 18px 0;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 6vw, 64px);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.wiki-intro-card p,
+.wiki-interview-success p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.wiki-identity-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 32px;
+}
+
+.wiki-identity-card > label,
+.wiki-identity-card fieldset {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: #d7d8da;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.wiki-identity-card input,
+.wiki-entry-list input,
+.wiki-entry-list textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  outline: 0;
+  background: #0d0f10;
+  color: #fff;
+}
+
+.wiki-identity-card > label > input {
+  min-height: 50px;
+  padding: 0 15px;
+}
+
+.wiki-identity-card fieldset {
+  grid-column: 1 / -1;
+}
+
+.wiki-role-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.wiki-role-options label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 18px;
+  background: #0d0f10;
+  cursor: pointer;
+}
+
+.wiki-role-options label.selected {
+  border-color: var(--orange);
+  background: rgba(255, 106, 0, 0.08);
+}
+
+.wiki-role-options input {
+  grid-row: 1 / 3;
+  width: auto;
+  accent-color: var(--orange);
+}
+
+.wiki-role-options span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.wiki-question-list {
+  display: grid;
+  gap: 16px;
+}
+
+.wiki-question-card {
+  padding: clamp(24px, 5vw, 42px);
+}
+
+.wiki-question-card header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wiki-question-card header span {
+  color: var(--orange);
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+.wiki-question-card header small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.wiki-question-card h2 {
+  margin: 18px 0;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.25;
+}
+
+.wiki-question-help {
+  margin: -8px 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.wiki-option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.wiki-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 13px 14px;
+  background: #0d0f10;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wiki-option input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: var(--orange);
+}
+
+.wiki-option:has(input:checked) {
+  border-color: var(--orange);
+  background: rgba(255, 106, 0, 0.08);
+}
+
+.wiki-question-card textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  outline: 0;
+  padding: 16px;
+  background: #0d0f10;
+  color: #fff;
+  line-height: 1.55;
+}
+
+.wiki-question-card textarea:focus,
+.wiki-identity-card input:focus,
+.wiki-entry-list input:focus,
+.wiki-entry-list textarea:focus {
+  border-color: var(--orange);
+}
+
+.wiki-audio-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.wiki-audio-row button,
+.wiki-submit {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.wiki-audio-row .wiki-upload-audio {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  padding: 0 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wiki-audio-row .wiki-upload-audio svg {
+  width: 18px;
+}
+
+.wiki-audio-row .wiki-upload-audio input {
+  display: none;
+}
+
+.wiki-audio-row button.recording {
+  background: #8b241b;
+}
+
+.wiki-audio-row audio {
+  width: min(420px, 100%);
+}
+
+.wiki-audio-row .remove-audio {
+  min-width: 44px;
+  padding: 0;
+}
+
+.wiki-audio-row svg,
+.wiki-submit svg {
+  width: 18px;
+}
+
+.wiki-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #c7c9cb;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.wiki-consent input {
+  margin-top: 3px;
+  accent-color: var(--orange);
+}
+
+.wiki-submit {
+  min-height: 58px;
+  background: var(--orange);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.wiki-submit:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.wiki-interview-success {
+  width: min(760px, 100%);
+  margin: 8vh auto;
+  padding: clamp(38px, 7vw, 72px);
+}
+
+.wiki-interview-success > svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 28px;
+  color: var(--orange);
+}
+
+.wiki-admin {
+  display: grid;
+  gap: 22px;
+}
+
+.wiki-admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.wiki-admin-metrics article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 14px;
+  border: 1px solid var(--line);
+  padding: 22px;
+  background: var(--graphite);
+}
+
+.wiki-admin-metrics svg {
+  grid-row: 1 / 3;
+  width: 24px;
+  color: var(--orange);
+}
+
+.wiki-admin-metrics span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.wiki-admin-metrics strong {
+  font-size: 28px;
+}
+
+.wiki-admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.wiki-admin-toolbar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.wiki-interview-admin-list,
+.wiki-entry-list,
+.wiki-event-list {
+  display: grid;
+  gap: 12px;
+}
+
+.wiki-interview-admin-list details,
+.wiki-entry-list > article,
+.wiki-event-list > article {
+  border: 1px solid var(--line);
+  background: var(--black-soft);
+}
+
+.wiki-interview-admin-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.wiki-interview-admin-list summary div {
+  display: grid;
+  gap: 5px;
+}
+
+.wiki-interview-admin-list summary span,
+.wiki-interview-admin-list summary small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.wiki-interview-answers {
+  display: grid;
+  gap: 12px;
+  padding: 0 18px 18px;
+}
+
+.wiki-interview-answers article {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.wiki-interview-answers p,
+.wiki-event-list p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.wiki-interview-answers small {
+  color: var(--orange-light);
+}
+
+.wiki-entry-list > article {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.wiki-entry-list > article.approved {
+  border-color: rgba(81, 190, 125, 0.5);
+}
+
+.wiki-entry-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wiki-entry-meta small {
+  color: var(--muted);
+}
+
+.wiki-entry-list input,
+.wiki-entry-list textarea {
+  padding: 13px;
+  resize: vertical;
+}
+
+.wiki-entry-list article > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.wiki-event-list > article {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.wiki-event-status {
+  width: fit-content;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.wiki-event-status.unanswered,
+.wiki-event-status.handoff,
+.wiki-event-status.error {
+  color: var(--orange-light);
+}
+
+.wiki-empty {
+  margin: 0;
+  padding: 24px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .wiki-interview-page {
+    padding: 18px 12px 60px;
+  }
+
+  .wiki-identity-card,
+  .wiki-role-options,
+  .wiki-admin-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-role-options {
+    display: grid;
+  }
+
+  .wiki-audio-row,
+  .wiki-admin-toolbar,
+  .wiki-entry-list article > div:last-child {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .wiki-audio-row audio {
+    width: 100%;
+  }
+
+  .wiki-entry-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
 }
 
 * {
@@ -348,7 +865,7 @@ a {
   gap: 50px;
   border-bottom: 1px solid var(--line);
   background:
-    radial-gradient(circle at 84% 50%, rgba(255, 92, 0, 0.1), transparent 24%),
+    radial-gradient(circle at 84% 50%, rgba(255, 106, 0, 0.1), transparent 24%),
     var(--black);
 }
 
@@ -587,7 +1104,7 @@ a {
   align-items: center;
   gap: clamp(50px, 9vw, 140px);
   background:
-    linear-gradient(135deg, transparent 70%, rgba(255, 92, 0, 0.06)),
+    linear-gradient(135deg, transparent 70%, rgba(255, 106, 0, 0.06)),
     var(--black-soft);
 }
 
@@ -913,11 +1430,11 @@ a {
   width: 74px;
   height: 74px;
   place-items: center;
-  border: 7px solid rgba(255, 92, 0, 0.22);
+  border: 7px solid rgba(255, 106, 0, 0.22);
   border-radius: 50%;
   background: var(--orange);
   background-clip: padding-box;
-  box-shadow: 0 0 0 13px rgba(255, 92, 0, 0.1);
+  box-shadow: 0 0 0 13px rgba(255, 106, 0, 0.1);
 }
 
 .map-pin svg {
@@ -971,6 +1488,12 @@ a {
 
 .final-cta > div {
   max-width: 970px;
+}
+
+.final-cta-mark {
+  width: auto;
+  height: 34px;
+  margin-bottom: 22px;
 }
 
 .final-cta h2 {
@@ -1576,7 +2099,7 @@ a {
   min-height: 100svh;
   place-items: center;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255, 92, 0, 0.12), transparent 24%),
+    radial-gradient(circle at 20% 30%, rgba(255, 106, 0, 0.12), transparent 24%),
     var(--black);
   padding: 25px;
 }
@@ -1842,7 +2365,7 @@ a {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: rgba(255, 92, 0, 0.11);
+  background: rgba(255, 106, 0, 0.11);
   content: "";
 }
 
@@ -1976,8 +2499,8 @@ a {
 
 .status-pill {
   display: inline-flex;
-  border: 1px solid rgba(255, 92, 0, 0.35);
-  background: rgba(255, 92, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  background: rgba(255, 106, 0, 0.08);
   padding: 5px 8px;
   color: var(--orange);
   font-size: 8px;
@@ -2357,7 +2880,7 @@ a {
   align-items: center;
   gap: 12px;
   margin-top: 25px;
-  background: rgba(255, 92, 0, 0.12);
+  background: rgba(255, 106, 0, 0.12);
   padding: 16px;
 }
 
@@ -2587,7 +3110,7 @@ a {
 }
 
 .service-card-top span {
-  border: 1px solid rgba(255, 92, 0, 0.3);
+  border: 1px solid rgba(255, 106, 0, 0.3);
   padding: 6px 8px;
   color: var(--orange);
   font-size: 8px;
@@ -3201,8 +3724,8 @@ a {
   display: grid;
   min-width: 115px;
   gap: 5px;
-  border: 1px solid rgba(255, 92, 0, 0.3);
-  background: rgba(255, 92, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  background: rgba(255, 106, 0, 0.08);
   padding: 11px;
   color: #fff;
   text-align: left;
@@ -3239,7 +3762,7 @@ a {
 }
 
 .table-status.atenção {
-  border-color: rgba(255, 92, 0, 0.3);
+  border-color: rgba(255, 106, 0, 0.3);
   color: var(--orange);
 }
 
@@ -3900,7 +4423,7 @@ a {
   overflow: hidden;
   border: 1px solid #2a2e31;
   background:
-    linear-gradient(110deg, rgba(255, 92, 0, 0.16), transparent 45%),
+    linear-gradient(110deg, rgba(255, 106, 0, 0.16), transparent 45%),
     repeating-linear-gradient(125deg, transparent 0 38px, rgba(255, 255, 255, 0.025) 39px 40px),
     #121416;
   padding: 34px;
@@ -3912,7 +4435,7 @@ a {
   right: 15%;
   width: 180px;
   height: 300px;
-  border: 35px solid rgba(255, 92, 0, 0.07);
+  border: 35px solid rgba(255, 106, 0, 0.07);
   content: "";
   transform: rotate(28deg);
 }
@@ -3944,7 +4467,7 @@ a {
   min-width: 260px;
   align-items: center;
   gap: 13px;
-  border: 1px solid rgba(255, 92, 0, 0.35);
+  border: 1px solid rgba(255, 106, 0, 0.35);
   background: rgba(9, 11, 12, 0.74);
   padding: 17px;
 }
@@ -4057,7 +4580,7 @@ a {
   width: 33px;
   height: 33px;
   place-items: center;
-  background: rgba(255, 92, 0, 0.12);
+  background: rgba(255, 106, 0, 0.12);
   color: var(--orange);
 }
 
@@ -4156,9 +4679,9 @@ a {
   align-items: center;
   gap: 25px;
   overflow: hidden;
-  border: 1px solid rgba(255, 92, 0, 0.32);
+  border: 1px solid rgba(255, 106, 0, 0.32);
   background:
-    linear-gradient(105deg, rgba(255, 92, 0, 0.13), transparent 45%),
+    linear-gradient(105deg, rgba(255, 106, 0, 0.13), transparent 45%),
     #141719;
   padding: 24px;
 }
@@ -4519,7 +5042,7 @@ a {
   gap: 30px;
   border: 1px solid #2a2e31;
   background:
-    radial-gradient(circle at 85% 20%, rgba(255, 92, 0, 0.16), transparent 22%),
+    radial-gradient(circle at 85% 20%, rgba(255, 106, 0, 0.16), transparent 22%),
     #121416;
   padding: 30px;
 }
@@ -4659,7 +5182,7 @@ a {
 }
 
 .invoice-status.pending {
-  border-color: rgba(255, 92, 0, 0.35);
+  border-color: rgba(255, 106, 0, 0.35);
   color: var(--orange);
 }
 
@@ -4782,7 +5305,7 @@ a {
   display: grid;
   gap: 14px;
   margin-top: 14px;
-  border: 1px solid rgba(255, 92, 0, 0.28);
+  border: 1px solid rgba(255, 106, 0, 0.28);
   background: #121416;
   padding: 22px;
 }
@@ -4988,7 +5511,7 @@ a {
   justify-content: space-between;
   overflow: hidden;
   background:
-    linear-gradient(105deg, rgba(7, 8, 9, 0.99) 10%, rgba(7, 8, 9, 0.78) 60%, rgba(255, 92, 0, 0.16)),
+    linear-gradient(105deg, rgba(7, 8, 9, 0.99) 10%, rgba(7, 8, 9, 0.78) 60%, rgba(255, 106, 0, 0.16)),
     url("/images/shift-training-wide.jpeg") center 35% / cover;
   padding: 150px max(7vw, 32px) 90px;
 }
@@ -5160,6 +5683,237 @@ a {
 
 .professional-copy > a svg {
   width: 15px;
+}
+
+/* Team weekly schedule */
+.team-schedule-section {
+  border-top: 1px solid #292d30;
+  background: #070809;
+}
+
+.team-schedule-intro {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.team-schedule-intro h2 {
+  margin: 18px 0 16px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.5vw, 64px);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.team-schedule-intro h2 em {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.team-schedule-intro p {
+  max-width: 560px;
+  color: #888e92;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.team-schedule-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.team-schedule-tabs button {
+  border: 1px solid #303438;
+  background: transparent;
+  padding: 10px 18px;
+  color: #a3a7aa;
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.team-schedule-tabs button:hover {
+  border-color: #4a4f54;
+  color: var(--white);
+}
+
+.team-schedule-tabs button.active {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: #fff;
+}
+
+.team-schedule-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.team-schedule-meta strong {
+  font-family: var(--font-condensed);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.team-schedule-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #888e92;
+  font-size: 11px;
+}
+
+.team-schedule-meta span svg {
+  width: 14px;
+  height: 14px;
+  color: var(--orange);
+}
+
+.team-schedule-empty {
+  border: 1px solid #292d30;
+  background: #0b0d0e;
+  padding: 30px;
+  color: #888e92;
+  font-size: 13px;
+}
+
+.team-schedule-rows {
+  display: grid;
+  gap: 1px;
+  border: 1px solid #292d30;
+  background: #292d30;
+}
+
+.team-schedule-ticks,
+.team-schedule-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  background: #0b0d0e;
+}
+
+.team-schedule-ticks > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.team-schedule-ticks em {
+  color: #62686c;
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
+.team-schedule-person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  border-right: 1px solid #1d2023;
+  padding: 16px 18px;
+}
+
+.team-schedule-person strong {
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.team-schedule-person span {
+  color: #888e92;
+  font-size: 10px;
+}
+
+.team-schedule-track {
+  position: relative;
+  margin: 14px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent calc(100% / 16)
+    );
+}
+
+.team-schedule-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
+  border-left: 2px solid var(--orange);
+  background: linear-gradient(90deg, rgba(255, 106, 0, 0.32), rgba(255, 106, 0, 0.14));
+  padding: 0 10px;
+}
+
+.team-schedule-bar span {
+  font-family: var(--font-condensed);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.team-schedule-bar em {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--orange-light);
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.team-schedule-bar em svg {
+  width: 11px;
+  height: 11px;
+}
+
+.team-schedule-row {
+  min-height: 64px;
+}
+
+@media (max-width: 820px) {
+  .team-schedule-ticks,
+  .team-schedule-row {
+    grid-template-columns: 1fr;
+  }
+
+  .team-schedule-ticks > span {
+    display: none;
+  }
+
+  .team-schedule-person {
+    border-right: 0;
+    border-bottom: 1px solid #1d2023;
+    padding: 14px 14px 10px;
+  }
+
+  .team-schedule-track {
+    min-height: 40px;
+    margin: 0 14px 14px;
+  }
+
+  .team-schedule-bar em {
+    display: none;
+  }
 }
 
 .team-cta {
@@ -5422,8 +6176,8 @@ a {
   min-height: 43px;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(255, 92, 0, 0.4);
-  background: rgba(255, 92, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.4);
+  background: rgba(255, 106, 0, 0.08);
   padding: 0 16px;
   color: var(--orange);
   font-size: 9px;
@@ -5438,7 +6192,7 @@ a {
 
 .league-dashboard-panel {
   background:
-    linear-gradient(110deg, rgba(255, 92, 0, 0.08), transparent 55%),
+    linear-gradient(110deg, rgba(255, 106, 0, 0.08), transparent 55%),
     #121416;
 }
 
@@ -5459,7 +6213,7 @@ a {
   min-height: 150px;
   place-content: center;
   border-right: 1px solid #2d3134;
-  background: rgba(255, 92, 0, 0.08);
+  background: rgba(255, 106, 0, 0.08);
   padding: 20px;
   text-align: center;
 }
@@ -5565,8 +6319,8 @@ a {
   overflow: hidden;
   border: 1px solid #2b2f32;
   background:
-    radial-gradient(circle at 82% 45%, rgba(255, 92, 0, 0.22), transparent 24%),
-    linear-gradient(115deg, rgba(255, 92, 0, 0.12), transparent 48%),
+    radial-gradient(circle at 82% 45%, rgba(255, 106, 0, 0.22), transparent 24%),
+    linear-gradient(115deg, rgba(255, 106, 0, 0.12), transparent 48%),
     repeating-linear-gradient(125deg, transparent 0 46px, rgba(255,255,255,0.022) 47px 48px),
     #111315;
   padding: clamp(30px, 5vw, 65px);
@@ -5578,7 +6332,7 @@ a {
   right: 8%;
   width: 410px;
   height: 700px;
-  border: 70px solid rgba(255, 92, 0, 0.055);
+  border: 70px solid rgba(255, 106, 0, 0.055);
   content: "";
   transform: rotate(28deg);
 }
@@ -5636,7 +6390,7 @@ a {
   display: grid;
   min-height: 270px;
   align-content: center;
-  border: 1px solid rgba(255, 92, 0, 0.34);
+  border: 1px solid rgba(255, 106, 0, 0.34);
   background: rgba(8, 10, 11, 0.72);
   padding: 30px;
 }
@@ -5734,7 +6488,7 @@ a {
   overflow: hidden;
   border: 1px solid #292d30;
   background:
-    radial-gradient(circle at 50% 105%, rgba(255, 92, 0, 0.17), transparent 42%),
+    radial-gradient(circle at 50% 105%, rgba(255, 106, 0, 0.17), transparent 42%),
     #101214;
   padding: 35px 30px 0;
 }
@@ -5776,7 +6530,7 @@ a {
   height: 82px;
   border-color: var(--orange);
   background: var(--orange);
-  box-shadow: 0 0 0 8px rgba(255, 92, 0, 0.09);
+  box-shadow: 0 0 0 8px rgba(255, 106, 0, 0.09);
 }
 
 .podium-crown {
@@ -5822,7 +6576,7 @@ a {
 .position-1 > i {
   height: 140px;
   border-top-color: var(--orange);
-  background: linear-gradient(180deg, rgba(255, 92, 0, 0.18), #17191b);
+  background: linear-gradient(180deg, rgba(255, 106, 0, 0.18), #17191b);
 }
 
 .position-2 > i {
@@ -5897,7 +6651,7 @@ a {
 
 .league-table > article.current-student {
   border-left: 3px solid var(--orange);
-  background: linear-gradient(90deg, rgba(255, 92, 0, 0.12), transparent 60%);
+  background: linear-gradient(90deg, rgba(255, 106, 0, 0.12), transparent 60%);
 }
 
 .league-position {
@@ -6064,7 +6818,7 @@ a {
 
 .league-achievements article.unlocked {
   background:
-    radial-gradient(circle at 85% 20%, rgba(255, 92, 0, 0.11), transparent 25%),
+    radial-gradient(circle at 85% 20%, rgba(255, 106, 0, 0.11), transparent 25%),
     #121416;
 }
 
@@ -6078,7 +6832,7 @@ a {
   height: 42px;
   place-items: center;
   margin-bottom: 21px;
-  background: rgba(255, 92, 0, 0.11);
+  background: rgba(255, 106, 0, 0.11);
   color: var(--orange);
 }
 
@@ -6201,8 +6955,8 @@ a {
   display: flex;
   align-items: center;
   gap: 9px;
-  border: 1px solid rgba(255, 92, 0, 0.3);
-  background: rgba(255, 92, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  background: rgba(255, 106, 0, 0.08);
   padding: 9px 11px;
 }
 

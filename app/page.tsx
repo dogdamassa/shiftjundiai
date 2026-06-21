@@ -354,6 +354,13 @@ export default function HomePage() {
 
       <section className="final-cta">
         <div>
+          <Image
+            className="final-cta-mark"
+            src="/brand/shift-wordmark-light.png"
+            alt=""
+            width={134}
+            height={40}
+          />
           <span className="eyebrow">Sua mudança começa aqui</span>
           <h2>PRONTO PARA FAZER O TREINO TRABALHAR POR VOCÊ?</h2>
         </div>
