@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
-import { siteConfig, whatsappUrl } from "@/lib/site";
+import { servicePages } from "@/lib/service-pages";
+import { directionsUrl, siteConfig, whatsappUrl } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -21,6 +22,14 @@ export function SiteFooter() {
           <Link href="/professores">Professores</Link>
         </div>
         <div>
+          <span className="footer-label">Treinos em Jundiaí</span>
+          {servicePages.map((page) => (
+            <Link key={page.slug} href={`/${page.slug}`}>
+              {page.navLabel}
+            </Link>
+          ))}
+        </div>
+        <div>
           <span className="footer-label">Fale com a Shift</span>
           <a href={whatsappUrl()} target="_blank" rel="noreferrer">
             <MessageCircle size={17} /> WhatsApp
@@ -28,9 +37,14 @@ export function SiteFooter() {
           <a href={siteConfig.instagram} target="_blank" rel="noreferrer">
             <Instagram size={17} /> Instagram
           </a>
-          <p className="footer-address">
+          <a
+            className="footer-address"
+            href={directionsUrl()}
+            target="_blank"
+            rel="noreferrer"
+          >
             <MapPin size={17} /> {siteConfig.address}
-          </p>
+          </a>
         </div>
       </div>
       <div className="footer-bottom">

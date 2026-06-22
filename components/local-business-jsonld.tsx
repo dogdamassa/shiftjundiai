@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
 export function LocalBusinessJsonLd() {
   const { addressParts } = siteConfig;
 
-  const jsonLd = {
+  const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": ["HealthClub", "ExerciseGym"],
     "@id": `${siteConfig.url}/#business`,
@@ -33,18 +33,37 @@ export function LocalBusinessJsonLd() {
         : {}),
       addressCountry: addressParts.country,
     },
+    // Coordenadas do pin — sinal direto de localização para a busca no Maps.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.geo.latitude,
+      longitude: siteConfig.geo.longitude,
+    },
     areaServed: {
       "@type": "City",
       name: "Jundiaí",
     },
     hasMap: siteConfig.mapsUrl,
-    sameAs: [siteConfig.instagram],
+    // Perfis oficiais que confirmam a identidade do negócio (Instagram + GBP
+    // quando disponível). `filter(Boolean)` remove links ainda não preenchidos.
+    sameAs: [siteConfig.instagram, siteConfig.googleBusiness].filter(Boolean),
     openingHoursSpecification: siteConfig.openingHours.map((slot) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: slot.days,
       opens: slot.opens,
       closes: slot.closes,
     })),
+    // Avaliações agregadas só entram com dados reais (siteConfig.rating). Sem
+    // isso, nada é emitido — evita schema com review inventado (penalizável).
+    ...(siteConfig.rating
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: siteConfig.rating.ratingValue,
+            reviewCount: siteConfig.rating.reviewCount,
+          },
+        }
+      : {}),
   };
 
   return (

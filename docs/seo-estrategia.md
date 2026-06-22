@@ -103,21 +103,22 @@ Candidatas (ordem de prioridade por volume/intenção):
 
 ## 4. Roadmap por fases
 
-### Fase 0 — Quick wins no código (1 sessão, eu faço)
-- [ ] Adicionar `geo` (lat/long) ao `LocalBusinessJsonLd`.
-- [ ] Adicionar GBP em `sameAs` (assim que tivermos o link público do perfil).
-- [ ] Reforçar `keywords`/description com termos de intenção local.
-- [ ] Estrutura de `aggregateRating` pronta (ativar quando houver reviews).
+### Fase 0 — Quick wins no código ✅ feito
+- [x] Adicionar `geo` (lat/long) ao `LocalBusinessJsonLd` — coordenadas confirmadas do pin (−23.18960, −46.88947).
+- [x] Estrutura de GBP em `sameAs` pronta — falta só o link público do perfil em `siteConfig.googleBusiness`.
+- [x] Reforçar `keywords`/description com termos de intenção local.
+- [x] Estrutura de `aggregateRating` pronta (ativa ao preencher `siteConfig.rating`).
 
 ### Fase 1 — Local SEO (você + eu)
 - [ ] **Você:** reivindicar/otimizar o Google Business Profile (categoria, NAP, horário, fotos, primeiro lote de reviews).
 - [ ] **Eu:** página `/academia-centro-jundiai` (a mais "local") + schema.
 - [ ] **Eu/você:** ligar Search Console + GA4, submeter sitemap.
 
-### Fase 2 — Páginas de intenção (eu faço, você revisa)
-- [ ] `/personal-trainer-jundiai`, `/musculacao-jundiai`, `/recovery-jundiai`, `/treino-personalizado-jundiai`.
-- [ ] Componente reutilizável de landing de serviço (conteúdo único por página, sem clone).
-- [ ] Schema `Service` + atualização do sitemap + interlinks a partir da home.
+### Fase 2 — Páginas de intenção ✅ feito (você revisa o texto)
+- [x] `/personal-trainer-jundiai`, `/musculacao-jundiai`, `/recovery-jundiai`, `/academia-centro-jundiai` (esta no lugar de `/treino-personalizado-jundiai`, por ser intenção local mais forte).
+- [x] Componente reutilizável `ServiceLanding` + conteúdo único por página em `lib/landing-content.ts` (gerado e revisado por workflow de marca/SEO).
+- [x] Schema `Service` + `BreadcrumbList` + `FAQPage` (`components/service-jsonld.tsx`), sitemap atualizado e interlinks no rodapé + entre páginas.
+- Próximo: revisar a copy das 4 páginas e, se quiser, criar `/treino-personalizado-jundiai` como 5ª (ainda dentro do teto de ~6).
 
 ### Fase 3 — Conteúdo / GEO-AEO
 - [ ] Bloco de **FAQ** na home (reaproveitando a wiki do agente).

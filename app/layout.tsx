@@ -32,12 +32,16 @@ export const metadata: Metadata = {
     template: "%s | Shift Jundiaí",
   },
   description:
-    "Treinamento personalizado, acompanhamento profissional e estrutura premium na Avenida 9 de Julho, em Jundiaí.",
+    "Academia e estúdio de treino personalizado no centro de Jundiaí: personal trainer, musculação, recovery e avaliação física com acompanhamento profissional na Avenida 9 de Julho.",
   keywords: [
     "academia Jundiaí",
+    "academia no centro de Jundiaí",
     "personal trainer Jundiaí",
-    "treino personalizado",
+    "musculação Jundiaí",
+    "estúdio de treino Jundiaí",
+    "treino personalizado Jundiaí",
     "recovery Jundiaí",
+    "avaliação física Jundiaí",
     "Shift Jundiaí",
   ],
   openGraph: {

@@ -13,6 +13,7 @@ import {
   Target,
   Users,
 } from "lucide-react";
+import { FaqSection } from "@/components/faq-section";
 import { LocalBusinessJsonLd } from "@/components/local-business-jsonld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -83,6 +84,39 @@ const gallery = [
     src: "/images/shift-performance.jpeg",
     alt: "Sessão individual de treinamento na Shift",
     className: "",
+  },
+];
+
+const homeFaq = [
+  {
+    question: "Onde fica a Shift e qual o horário?",
+    answer:
+      "A Shift fica na Av. 9 de Julho, 3290 – Loja 4 – Centro, Jundiaí – SP. O horário é de segunda a sexta das 6h às 22h e aos sábados das 8h às 12h; aos domingos, fechado. Em feriados o funcionamento pode variar — confirme com a equipe pelo WhatsApp.",
+  },
+  {
+    question: "A Shift atende quem nunca treinou?",
+    answer:
+      "Sim. O treino é adaptado ao seu nível, objetivo e experiência, então iniciantes são bem-vindos. Com acompanhamento próximo, de no máximo 2 alunos por professor, você aprende a execução correta desde a primeira sessão.",
+  },
+  {
+    question: "Quanto custa treinar na Shift?",
+    answer:
+      "Os valores dependem do plano, da frequência e do tipo de acompanhamento. O melhor caminho é chamar no WhatsApp: a equipe entende o seu momento e o seu objetivo antes de indicar o plano que faz sentido para você.",
+  },
+  {
+    question: "Como funciona a aula experimental?",
+    answer:
+      "A visita e a aula experimental acontecem mediante agendamento e disponibilidade. É só chamar no WhatsApp com o seu nome, se você tem alguma lesão ou restrição e o melhor horário, que a equipe combina com você.",
+  },
+  {
+    question: "Tem estacionamento?",
+    answer:
+      "Sim. O prédio oferece estacionamento coberto com manobrista (valet) incluso por até 2 horas. Você chega, deixa o carro e foca no treino.",
+  },
+  {
+    question: "Tenho uma lesão, posso treinar?",
+    answer:
+      "A equipe precisa entender a sua condição antes de começar, e em alguns casos pode ser pedida uma liberação médica. O treino é então adaptado com segurança ao seu momento. Fale com a gente pelo WhatsApp para te orientarmos.",
   },
 ];
 
@@ -283,6 +317,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FaqSection items={homeFaq} title="ANTES DE VISITAR, TIRE SUAS DÚVIDAS." />
 
       <section className="final-cta">
         <div>

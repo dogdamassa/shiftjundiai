@@ -1513,8 +1513,8 @@ a {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr 0.6fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1.5fr 0.8fr 1fr 1fr;
+  gap: 48px;
   padding-bottom: 60px;
 }
 
@@ -7133,5 +7133,231 @@ a {
   .league-history > .dash-button {
     grid-column: auto;
     width: 100%;
+  }
+}
+
+/* =========================================================================
+   Landing pages de serviço (SEO local — Pilar 2)
+   ========================================================================= */
+.service-page {
+  background: var(--black);
+}
+
+.service-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 168px max(5vw, 28px) 90px;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 85% 8%, rgba(255, 106, 0, 0.16), transparent 38%),
+    radial-gradient(circle at 0% 100%, rgba(255, 106, 0, 0.06), transparent 30%),
+    var(--black);
+}
+
+.service-hero::before {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(90deg, #000, transparent 70%);
+  content: "";
+  pointer-events: none;
+}
+
+.service-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+}
+
+.service-hero h1 {
+  margin: 22px 0 20px;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 82px);
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.service-hero-sub {
+  max-width: 620px;
+  margin: 0 0 38px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+}
+
+.service-intro {
+  padding-top: 90px;
+  padding-bottom: 0;
+}
+
+.service-intro p {
+  max-width: 880px;
+  margin: 0;
+  border-left: 3px solid var(--orange);
+  padding: 6px 0 6px 28px;
+  color: #d7d8da;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.7;
+}
+
+.service-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.service-blocks article {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.service-blocks h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-condensed);
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.service-blocks p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.service-whofor .check-list {
+  max-width: 760px;
+}
+
+.service-whofor .check-list li {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.service-faq {
+  background: #0b0d0e;
+}
+
+.service-faq-list {
+  display: grid;
+  max-width: 900px;
+  gap: 12px;
+}
+
+.service-faq-list details {
+  border: 1px solid var(--line);
+  background: var(--black-soft);
+  padding: 4px 22px;
+}
+
+.service-faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 0;
+  font-family: var(--font-condensed);
+  font-size: 16px;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+.service-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-faq-list summary::after {
+  color: var(--orange);
+  font-size: 22px;
+  content: "+";
+  transition: transform 200ms ease;
+}
+
+.service-faq-list details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.service-faq-list details p {
+  margin: 0;
+  padding: 0 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.service-related {
+  border-top: 1px solid var(--line);
+}
+
+.service-related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.service-related-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 1px solid var(--line);
+  background: var(--black-soft);
+  padding: 22px 24px;
+  font-family: var(--font-condensed);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.service-related-card:hover {
+  border-color: var(--orange);
+  background: #121517;
+}
+
+.service-related-card svg {
+  width: 18px;
+  flex: 0 0 auto;
+  color: var(--orange);
+}
+
+.service-cta-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+
+.service-cta-address:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+  .service-hero {
+    padding: 130px 24px 70px;
+  }
+
+  .service-blocks,
+  .service-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-blocks {
+    gap: 36px;
   }
 }
