@@ -112,13 +112,20 @@ export const seedWikiEntries: WikiEntry[] = [
     "atend-servicos",
     "Serviços e diferenciais",
     "Serviços e modalidades",
-    "A Shift oferece musculação, treino funcional, personal trainer e avaliação física, sempre com a proposta de treino premium e individualizado. Para outras modalidades que possam perguntar (ex.: Pilates, lutas, acompanhamento nutricional), não afirme que existem — confirme com a equipe antes.",
+    "A Shift oferece musculação, treino funcional, personal trainer, recovery e avaliação física, sempre com a proposta de treino premium e individualizado. Para outras modalidades que possam perguntar (ex.: Pilates, lutas, acompanhamento nutricional), não afirme que existem — confirme com a equipe antes.",
   ),
   entry(
     "atend-estrutura",
     "Serviços e diferenciais",
     "Estrutura da academia",
     "A Shift oferece uma estrutura confortável, preparada para uma experiência de treino premium, com estacionamento coberto e manobrista (valet) incluso por até 2 horas. Para outras comodidades (chuveiros, armários, Wi-Fi), não afirme sem confirmação — ofereça consultar a equipe.",
+    "leader",
+  ),
+  entry(
+    "atend-recovery",
+    "Serviços e diferenciais",
+    "Recovery (recuperação muscular)",
+    "A Shift tem recovery (recuperação muscular) integrado ao treino e ao acompanhamento do aluno. Cada plano inclui uma sessão de recovery por mês, e o aluno pode contratar sessões adicionais quando quiser. O recovery é ajustado ao que a pessoa treinou e à sua fase. Não é tratamento médico nem promessa de cura. Não cite valores das sessões adicionais — a equipe confirma condições e preços.",
     "leader",
   ),
   entry(

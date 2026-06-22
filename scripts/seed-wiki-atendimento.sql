@@ -80,6 +80,11 @@ from (values
    'A Shift oferece uma estrutura confortável, preparada para uma experiência de treino premium, com estacionamento coberto e manobrista (valet) incluso por até 2 horas. Para outras comodidades (chuveiros, armários, Wi-Fi), não afirme sem confirmação — ofereça consultar a equipe.',
    'leader'),
 
+  ('Serviços e diferenciais',
+   'Recovery (recuperação muscular)',
+   'A Shift tem recovery (recuperação muscular) integrado ao treino e ao acompanhamento do aluno. Cada plano inclui uma sessão de recovery por mês, e o aluno pode contratar sessões adicionais quando quiser. O recovery é ajustado ao que a pessoa treinou e à sua fase. Não é tratamento médico nem promessa de cura. Não cite valores das sessões adicionais — a equipe confirma condições e preços.',
+   'leader'),
+
   ('Preços e condições aprovadas',
    'Planos e valores',
    'Planos, valores e condições variam conforme a frequência, o tipo de acompanhamento e o período contratado. Nunca invente preços, descontos ou promoções. Encaminhe o interesse para a equipe apresentar a melhor opção. Quando os dados estiverem cadastrados, é possível informar nome do plano, valor mensal, quantidade de treinos, serviços incluídos, duração do contrato, matrícula/adesão, forma de renovação e regras de cancelamento.',
