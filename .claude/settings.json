@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(node --check scripts/google-forms/criar-forms-shift.gs)",
+      "Bash(cp scripts/google-forms/criar-forms-shift.gs /tmp/check-forms.js)",
+      "Bash(node --check /tmp/check-forms.js)",
+      "Bash(cp scripts/google-forms/criar-form-identidade.gs /tmp/check-id.js)",
+      "Bash(node --check /tmp/check-id.js)",
+      "Bash(rm /tmp/check-id.js)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

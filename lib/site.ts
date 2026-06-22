@@ -3,9 +3,12 @@ export const siteConfig = {
   legalName: "Shift Estúdio Jundiaí",
   tagline: "Performance & Resultados",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://studioshift.com.br",
-  address: "Av. 9 de Julho, 3290 - Loja 4, Centro, Jundiaí - SP",
+  address: "Av. 9 de Julho, 3290 - Loja 4 - Centro, Jundiaí - SP, 13201-019",
+  // Link do Google Maps. Busca pelo nome do negócio, que já está cadastrado e
+  // cai direto no pin oficial da Shift — mais preciso que buscar pelo endereço.
+  mapsUrl: "https://maps.google.com/?q=Shift+Estúdio+Jundiaí",
   addressParts: {
-    street: "Av. 9 de Julho, 3290 - Loja 4",
+    street: "Av. 9 de Julho, 3290 - Loja 4 - Centro",
     locality: "Jundiaí",
     region: "SP",
     postalCode: "13201-019",

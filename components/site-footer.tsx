@@ -8,16 +8,17 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <BrandLogo />
+          <BrandLogo lockup variant="light" />
           <p>
-            Treinamento com método, direção e acompanhamento de verdade.
+            Estúdio de treino personalizado e musculação em Jundiaí.
+            Método, direção e acompanhamento de verdade.
           </p>
         </div>
         <div>
           <span className="footer-label">Navegação</span>
           <Link href="/#metodo">Método Shift</Link>
           <Link href="/#estrutura">Estrutura</Link>
-          <Link href="/login">Área do aluno</Link>
+          <Link href="/professores">Professores</Link>
         </div>
         <div>
           <span className="footer-label">Fale com a Shift</span>

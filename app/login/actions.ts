@@ -13,7 +13,7 @@ export async function login(
   formData: FormData,
 ): Promise<LoginState> {
   if (!hasSupabaseEnv()) {
-    redirect("/aluno");
+    redirect("/professor");
   }
 
   const email = String(formData.get("email") ?? "");
@@ -39,7 +39,7 @@ export async function login(
       ? "/admin"
       : profile?.role === "trainer"
         ? "/professor"
-        : "/aluno";
+        : "/";
 
   redirect(destination);
 }

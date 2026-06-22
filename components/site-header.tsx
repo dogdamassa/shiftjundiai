@@ -9,7 +9,6 @@ import { whatsappUrl } from "@/lib/site";
 const links = [
   ["Método", "/#metodo"],
   ["Experiência", "/#experiencia"],
-  ["Evolução", "/#evolucao"],
   ["Estrutura", "/#estrutura"],
   ["Professores", "/professores"],
   ["Localização", "/#localizacao"],
@@ -28,9 +27,6 @@ export function SiteHeader() {
               {label}
             </Link>
           ))}
-          <Link className="nav-login" href="/login">
-            Área do aluno
-          </Link>
           <a
             className="button button-primary nav-cta"
             href={whatsappUrl()}

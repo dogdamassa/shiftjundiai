@@ -4,9 +4,6 @@ import {
   ArrowDownRight,
   ArrowRight,
   Brain,
-  Check,
-  Clock3,
-  Dumbbell,
   Gauge,
   HeartPulse,
   MapPin,
@@ -16,6 +13,7 @@ import {
   Target,
   Users,
 } from "lucide-react";
+import { LocalBusinessJsonLd } from "@/components/local-business-jsonld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
@@ -91,6 +89,7 @@ const gallery = [
 export default function HomePage() {
   return (
     <main className="marketing-page">
+      <LocalBusinessJsonLd />
       <SiteHeader />
 
       <section className="hero">
@@ -225,72 +224,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="evolution section" id="evolucao">
-        <div className="evolution-copy">
-          <span className="eyebrow orange">Evolução conectada</span>
-          <h2>SEUS DADOS CONTAM A SUA HISTÓRIA.</h2>
-          <p>
-            No portal Shift, você acompanha treino, frequência, medidas,
-            avaliações e agenda em um só lugar. Seu professor enxerga o mesmo
-            caminho e ajusta o próximo passo.
-          </p>
-          <ul className="check-list">
-            <li>
-              <Check /> Plano de treino sempre atualizado
-            </li>
-            <li>
-              <Check /> Histórico de cargas e avaliações
-            </li>
-            <li>
-              <Check /> Agenda de treino e recovery
-            </li>
-          </ul>
-          <a className="text-link" href="/login">
-            Conheça a área do aluno <ArrowRight />
-          </a>
-        </div>
-        <div className="app-preview">
-          <div className="app-preview-header">
-            <div>
-              <span>Bom dia, Marina</span>
-              <strong>Seu próximo passo.</strong>
-            </div>
-            <div className="avatar">MS</div>
-          </div>
-          <div className="preview-next">
-            <span>PRÓXIMO TREINO</span>
-            <div>
-              <strong>10</strong>
-              <span>JUN<br />07:00</span>
-            </div>
-            <p>Performance B · Inferiores</p>
-            <small>com Rafael Mendes</small>
-          </div>
-          <div className="preview-stats">
-            <div>
-              <Gauge />
-              <strong>92%</strong>
-              <span>Frequência</span>
-            </div>
-            <div>
-              <Dumbbell />
-              <strong>+18%</strong>
-              <span>Força</span>
-            </div>
-            <div>
-              <Clock3 />
-              <strong>8</strong>
-              <span>Semanas</span>
-            </div>
-          </div>
-          <div className="preview-chart">
-            {[45, 58, 52, 68, 72, 86, 82, 96].map((height, index) => (
-              <i key={index} style={{ height: `${height}%` }} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="structure section" id="estrutura">
         <div className="section-heading">
           <div>
@@ -330,6 +263,10 @@ export default function HomePage() {
           <div className="location-copy">
             <span className="eyebrow orange">No centro do seu caminho</span>
             <h2>SHIFT JUNDIAÍ</h2>
+            <p>
+              Estúdio de treino personalizado, musculação e recovery com
+              acompanhamento de personal trainer no centro de Jundiaí.
+            </p>
             <p>{siteConfig.address}</p>
             <div className="location-details">
               <span>Estacionamento no local</span>
@@ -337,7 +274,7 @@ export default function HomePage() {
             </div>
             <a
               className="button button-primary"
-              href="https://maps.google.com/?q=Av.+9+de+Julho,+3290,+Jundiaí"
+              href={siteConfig.mapsUrl}
               target="_blank"
               rel="noreferrer"
             >
@@ -349,6 +286,13 @@ export default function HomePage() {
 
       <section className="final-cta">
         <div>
+          <Image
+            className="final-cta-mark"
+            src="/brand/shift-wordmark-light.png"
+            alt=""
+            width={134}
+            height={40}
+          />
           <span className="eyebrow">Sua mudança começa aqui</span>
           <h2>PRONTO PARA FAZER O TREINO TRABALHAR POR VOCÊ?</h2>
         </div>

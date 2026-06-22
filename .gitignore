@@ -6,3 +6,10 @@ coverage
 *.log
 *.tsbuildinfo
 .DS_Store
+
+# Vínculo local com a Vercel (criado ao conectar o projeto)
+.vercel
+
+# Config local do Claude Code (não compartilhar)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock

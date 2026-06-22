@@ -20,7 +20,7 @@ export function LocalBusinessJsonLd() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     image: `${siteConfig.url}/images/og-shift.jpg`,
-    logo: `${siteConfig.url}/icon.svg`,
+    logo: `${siteConfig.url}/icon.png`,
     priceRange: "$$$",
     currenciesAccepted: "BRL",
     address: {
@@ -37,8 +37,7 @@ export function LocalBusinessJsonLd() {
       "@type": "City",
       name: "Jundiaí",
     },
-    hasMap:
-      "https://maps.google.com/?q=Av.+9+de+Julho,+3290,+Jundiaí",
+    hasMap: siteConfig.mapsUrl,
     sameAs: [siteConfig.instagram],
     openingHoursSpecification: siteConfig.openingHours.map((slot) => ({
       "@type": "OpeningHoursSpecification",

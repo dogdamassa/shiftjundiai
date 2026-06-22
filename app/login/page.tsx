@@ -44,7 +44,6 @@ export default function LoginPage() {
           <div className="demo-access">
             <span>Visualizar demonstração</span>
             <div>
-              <Link href="/aluno">Aluno</Link>
               <Link href="/professor">Professor</Link>
               <Link href="/admin">Admin</Link>
             </div>

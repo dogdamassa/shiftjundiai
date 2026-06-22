@@ -22,8 +22,8 @@ export function ProgressChart() {
         <AreaChart data={progress} margin={{ left: -22, right: 5, top: 10 }}>
           <defs>
             <linearGradient id="shiftGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#ff5c00" stopOpacity={0.38} />
-              <stop offset="95%" stopColor="#ff5c00" stopOpacity={0} />
+              <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.38} />
+              <stop offset="95%" stopColor="#ff6a00" stopOpacity={0} />
             </linearGradient>
           </defs>
           <CartesianGrid stroke="#2a2e31" vertical={false} />
@@ -40,7 +40,7 @@ export function ProgressChart() {
             dataKey="strength"
             name="Índice de força"
             type="monotone"
-            stroke="#ff5c00"
+            stroke="#ff6a00"
             strokeWidth={3}
             fill="url(#shiftGradient)"
           />

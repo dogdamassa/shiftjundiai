@@ -714,7 +714,7 @@ insert into public.site_content (key, value)
 values
   (
     'contact',
-    '{"whatsapp":"+55 (11) 97377-1914","address":"Av. 9 de Julho, 3290 - Loja 4, Centro, Jundiaí - SP"}'::jsonb
+    '{"whatsapp":"+55 (11) 97377-1914","address":"Av. 9 de Julho, 3290 - Loja 4 - Centro, Jundiaí - SP, 13201-019"}'::jsonb
   ),
   (
     'hero',

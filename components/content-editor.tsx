@@ -46,7 +46,7 @@ export function ContentEditor() {
           </label>
           <label>
             Endereço
-            <input name="address" defaultValue="Av. 9 de Julho, 3290 - Loja 4, Centro, Jundiaí - SP" />
+            <input name="address" defaultValue="Av. 9 de Julho, 3290 - Loja 4 - Centro, Jundiaí - SP, 13201-019" />
           </label>
         </div>
         {error && <p className="form-error">{error}</p>}

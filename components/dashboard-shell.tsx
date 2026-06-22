@@ -6,18 +6,16 @@ import {
   Bell,
   Bike,
   CalendarDays,
-  ChartNoAxesCombined,
   ChevronLeft,
   ClipboardList,
-  Dumbbell,
   HeartPulse,
   LayoutDashboard,
   LogOut,
   Menu,
   ScanLine,
   Settings,
-  Trophy,
   Users,
+  Bot,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -27,18 +25,6 @@ import { BrandLogo } from "@/components/brand-logo";
 import type { UserRole } from "@/lib/types";
 
 const roleLinks = {
-  student: [
-    { href: "/aluno", label: "Visão geral", icon: LayoutDashboard },
-    { href: "/aluno/agenda", label: "Minha agenda", icon: CalendarDays },
-    { href: "/aluno/aulas", label: "Flow & Move", icon: Bike },
-    { href: "/aluno/check-in", label: "Check-in", icon: ScanLine },
-    { href: "/aluno/league", label: "Shift League", icon: Trophy },
-    { href: "/aluno/treino", label: "Meu treino", icon: Dumbbell },
-    { href: "/aluno/evolucao", label: "Evolução", icon: ChartNoAxesCombined },
-    { href: "/aluno/servicos", label: "Serviços", icon: HeartPulse },
-    { href: "/aluno/financeiro", label: "Financeiro", icon: BadgeDollarSign },
-    { href: "/aluno/recados", label: "Recados", icon: Bell },
-  ],
   trainer: [
     { href: "/professor", label: "Hoje", icon: LayoutDashboard },
     { href: "/professor/agenda", label: "Agenda", icon: CalendarDays },
@@ -58,6 +44,7 @@ const roleLinks = {
     { href: "/admin/servicos", label: "Serviços", icon: HeartPulse },
     { href: "/admin/recados", label: "Recados", icon: Bell },
     { href: "/admin/conteudo", label: "Site e conteúdo", icon: ClipboardList },
+    { href: "/admin/wiki", label: "Wiki e agente", icon: Bot },
   ],
 } satisfies Record<
   UserRole,
@@ -65,7 +52,6 @@ const roleLinks = {
 >;
 
 const roleMeta = {
-  student: { name: "Marina Silva", label: "Aluno", initials: "MS" },
   trainer: { name: "Rafael Mendes", label: "Professor", initials: "RM" },
   admin: { name: "Ana Ferreira", label: "Admin", initials: "AF" },
 };

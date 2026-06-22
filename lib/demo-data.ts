@@ -8,6 +8,7 @@ import type {
   LeagueAchievement,
   LeagueMember,
   PublicProfessional,
+  TeamScheduleEntry,
 } from "@/lib/types";
 
 export const student = {
@@ -311,6 +312,103 @@ export const publicProfessionals: PublicProfessional[] = [
     bio: "Avalia padrões de movimento e conduz intervenções para que o aluno evolua com segurança e confiança.",
     image: "/images/shift-experience.jpeg",
     imagePosition: "center 30%",
+  },
+];
+
+// Grade semanal da equipe — days: 0 = Segunda ... 6 = Domingo
+export const teamSchedule: TeamScheduleEntry[] = [
+  {
+    id: "rafael",
+    name: "Rafael Mendes",
+    role: "Head Coach",
+    specialty: "Força & Hipertrofia",
+    windows: [{ days: [0, 1, 2, 3, 4], start: "06:00", end: "12:00" }],
+  },
+  {
+    id: "paula",
+    name: "Paula Torres",
+    role: "Coach",
+    specialty: "Bike & Condicionamento",
+    windows: [{ days: [0, 1, 2, 3, 4], start: "16:00", end: "22:00" }],
+  },
+  {
+    id: "thiago",
+    name: "Thiago Ramos",
+    role: "Coach",
+    specialty: "Funcional & Potência",
+    windows: [{ days: [0, 2, 4], start: "07:00", end: "13:00" }],
+  },
+  {
+    id: "pedro",
+    name: "Pedro Almeida",
+    role: "Coach",
+    specialty: "Treino personalizado",
+    windows: [
+      { days: [5], start: "08:00", end: "14:00" },
+      { days: [6], start: "08:00", end: "12:00" },
+    ],
+  },
+  {
+    id: "bianca",
+    name: "Bianca Rocha",
+    role: "Coach",
+    specialty: "Treino personalizado",
+    windows: [{ days: [0, 1, 2, 3, 4, 5], start: "06:00", end: "10:00" }],
+  },
+  {
+    id: "diego",
+    name: "Diego Martins",
+    role: "Coach",
+    specialty: "Força & Emagrecimento",
+    windows: [{ days: [0, 1, 2, 3, 4], start: "17:00", end: "21:00" }],
+  },
+  {
+    id: "marcos",
+    name: "Marcos Vieira",
+    role: "Coach",
+    specialty: "Treino personalizado",
+    windows: [{ days: [0, 1, 2, 3, 4], start: "12:00", end: "16:00" }],
+  },
+  {
+    id: "camila",
+    name: "Camila Nunes",
+    role: "Recovery Specialist",
+    specialty: "Recovery & Mobilidade",
+    windows: [{ days: [0, 2, 4], start: "14:00", end: "18:00" }],
+  },
+  {
+    id: "lucas",
+    name: "Lucas Prado",
+    role: "Fisioterapeuta",
+    specialty: "Prevenção & Reabilitação",
+    windows: [{ days: [1, 3], start: "08:00", end: "12:00" }],
+  },
+  {
+    id: "juliana",
+    name: "Juliana Freitas",
+    role: "Instrutora",
+    specialty: "Pilates & Mobilidade",
+    windows: [{ days: [1, 3], start: "16:00", end: "20:00" }],
+  },
+  {
+    id: "fernanda",
+    name: "Fernanda Costa",
+    role: "Nutricionista",
+    specialty: "Nutrição esportiva",
+    windows: [
+      { days: [2], start: "14:00", end: "16:00" },
+      { days: [5], start: "09:00", end: "11:00" },
+    ],
+  },
+  {
+    id: "aline",
+    name: "Aline Souza",
+    role: "Coach",
+    specialty: "Bike & Ritmo",
+    windows: [
+      { days: [1, 3], start: "08:00", end: "10:00" },
+      { days: [5], start: "10:00", end: "12:00" },
+    ],
   },
 ];
 

@@ -1,4 +1,4 @@
-export type UserRole = "admin" | "trainer" | "student";
+export type UserRole = "admin" | "trainer";
 
 export type AppointmentStatus = "confirmed" | "completed" | "cancelled";
 
@@ -98,6 +98,21 @@ export interface PublicProfessional {
   image: string;
   imagePosition?: string;
   instagram?: string;
+}
+
+export interface ScheduleWindow {
+  /** 0 = Segunda ... 6 = Domingo */
+  days: number[];
+  start: string;
+  end: string;
+}
+
+export interface TeamScheduleEntry {
+  id: string;
+  name: string;
+  role: string;
+  specialty: string;
+  windows: ScheduleWindow[];
 }
 
 export interface LeagueMember {
